@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { CheckoutModal } from './components/CheckoutModal';
 import { InfoModals, InfoModalType } from './components/InfoModals';
+import { TestimonialsCarousel } from './components/TestimonialsCarousel';
 
 const slideDeckRow1 = [
   { id: 1, src: '/slides/slide-01.png' },
@@ -119,16 +120,16 @@ export default function App() {
             </p>
 
             {/* DOIS CARROSSEIS INFINITOS UM DEBAIXO DO OUTRO */}
-            <div className="w-screen relative left-1/2 -translate-x-1/2 max-w-7xl py-3 space-y-3 sm:space-y-4 overflow-hidden">
+            <div className="w-screen relative left-1/2 -translate-x-1/2 max-w-[1400px] py-4 sm:py-6 space-y-4 sm:space-y-6 overflow-hidden">
               
               {/* Carrossel 1 (movendo para a esquerda) */}
-              <div className="carousel-mask overflow-hidden py-1">
-                <div className="animate-marquee-left flex gap-3.5 sm:gap-5">
+              <div className="carousel-mask overflow-hidden py-1.5">
+                <div className="animate-marquee-left flex gap-4 sm:gap-6">
                   {[...slideDeckRow1, ...slideDeckRow1, ...slideDeckRow1, ...slideDeckRow1].map((slide, index) => (
                     <div
                       key={`r1-${index}`}
                       onClick={() => setSelectedSlidePreview(slide.src)}
-                      className="shrink-0 w-[230px] sm:w-[310px] md:w-[360px] aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-rose-200/90 shadow-md shadow-rose-950/5 hover:shadow-2xl hover:border-rose-400 hover:scale-[1.03] transition-all duration-300 bg-white cursor-pointer group"
+                      className="shrink-0 w-[270px] sm:w-[360px] md:w-[420px] lg:w-[470px] aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-rose-200/90 shadow-md shadow-rose-950/5 hover:shadow-2xl hover:border-rose-400 hover:scale-[1.03] transition-all duration-300 bg-white cursor-pointer group"
                     >
                       <img
                         src={slide.src}
@@ -142,13 +143,13 @@ export default function App() {
               </div>
 
               {/* Carrossel 2 (movendo para a direita) */}
-              <div className="carousel-mask overflow-hidden py-1">
-                <div className="animate-marquee-right flex gap-3.5 sm:gap-5">
+              <div className="carousel-mask overflow-hidden py-1.5">
+                <div className="animate-marquee-right flex gap-4 sm:gap-6">
                   {[...slideDeckRow2, ...slideDeckRow2, ...slideDeckRow2, ...slideDeckRow2].map((slide, index) => (
                     <div
                       key={`r2-${index}`}
                       onClick={() => setSelectedSlidePreview(slide.src)}
-                      className="shrink-0 w-[230px] sm:w-[310px] md:w-[360px] aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-rose-200/90 shadow-md shadow-rose-950/5 hover:shadow-2xl hover:border-rose-400 hover:scale-[1.03] transition-all duration-300 bg-white cursor-pointer group"
+                      className="shrink-0 w-[270px] sm:w-[360px] md:w-[420px] lg:w-[470px] aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-rose-200/90 shadow-md shadow-rose-950/5 hover:shadow-2xl hover:border-rose-400 hover:scale-[1.03] transition-all duration-300 bg-white cursor-pointer group"
                     >
                       <img
                         src={slide.src}
@@ -607,55 +608,18 @@ export default function App() {
             
             <div className="text-center max-w-xl mx-auto space-y-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-rose-600">
-                Validação de Conteúdo
+                Depoimentos Reais
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Feedback de quem já avaliou a apresentação
+                O que dizem sobre o material
               </h2>
               <p className="text-xs sm:text-sm text-slate-500">
-                Estrutura revisada e testada em dinâmicas reais de apresentação corporativa e escolar.
+                Mensagens de quem utilizou a apresentação para conduzir suas palestras e ações de Outubro Rosa.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              
-              <div className="bg-white p-5 rounded-2xl border border-rose-100 shadow-xs flex flex-col justify-between space-y-3">
-                <div className="space-y-2">
-                  <div className="text-amber-400 text-sm tracking-wider">⭐⭐⭐⭐⭐</div>
-                  <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-                    “Consegui organizar nossa ação sem precisar montar os slides do zero.”
-                  </p>
-                </div>
-                <div className="pt-2 border-t border-slate-100 text-xs text-slate-500">
-                  <span className="font-semibold text-slate-800">Carla M.</span> · Coordenação de RH
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-2xl border border-rose-100 shadow-xs flex flex-col justify-between space-y-3">
-                <div className="space-y-2">
-                  <div className="text-amber-400 text-sm tracking-wider">⭐⭐⭐⭐⭐</div>
-                  <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-                    “O material ficou ótimo no projetor e facilitou bastante a apresentação.”
-                  </p>
-                </div>
-                <div className="pt-2 border-t border-slate-100 text-xs text-slate-500">
-                  <span className="font-semibold text-slate-800">Fernanda R.</span> · Enfermeira & Docente
-                </div>
-              </div>
-
-              <div className="bg-white p-5 rounded-2xl border border-rose-100 shadow-xs flex flex-col justify-between space-y-3">
-                <div className="space-y-2">
-                  <div className="text-amber-400 text-sm tracking-wider">⭐⭐⭐⭐⭐</div>
-                  <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-                    “Economizou muito tempo na preparação da palestra da nossa equipe.”
-                  </p>
-                </div>
-                <div className="pt-2 border-t border-slate-100 text-xs text-slate-500">
-                  <span className="font-semibold text-slate-800">Patrícia S.</span> · Gestão de Pessoas
-                </div>
-              </div>
-
-            </div>
+            {/* Carrossel Interativo com 3 Depoimentos Reais */}
+            <TestimonialsCarousel onImageClick={(src) => setSelectedSlidePreview(src)} />
 
           </div>
         </section>

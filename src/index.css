@@ -61,14 +61,14 @@ html, body {
 .animate-marquee-left {
   display: flex;
   width: max-content;
-  animation: marquee-scroll-left 40s linear infinite;
+  animation: marquee-scroll-left 85s linear infinite;
   will-change: transform;
 }
 
 .animate-marquee-right {
   display: flex;
   width: max-content;
-  animation: marquee-scroll-right 45s linear infinite;
+  animation: marquee-scroll-right 92s linear infinite;
   will-change: transform;
 }
 
