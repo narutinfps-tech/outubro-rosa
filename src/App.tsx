@@ -15,6 +15,8 @@ import {
   HelpCircle, 
   Sparkles,
   Award,
+  FileText,
+  Send,
   X
 } from 'lucide-react';
 import { CheckoutModal } from './components/CheckoutModal';
@@ -351,6 +353,230 @@ export default function App() {
 
 
         {/* =========================================================================
+            BÔNUS EXCLUSIVOS (ACIMA DOS CARDS DE OFERTAS)
+            ========================================================================= */}
+        <section id="bonus" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#FFFDF9] via-white to-[#FAF8F8] border-t border-amber-200/50">
+          <div className="max-w-5xl mx-auto space-y-10">
+            
+            <div className="text-center max-w-2xl mx-auto space-y-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-300 text-xs font-bold text-amber-900 shadow-xs">
+                <Gift className="w-3.5 h-3.5 text-amber-600" />
+                <span>4 BÔNUS EXCLUSIVOS</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight" style={{ textWrap: 'balance' }}>
+                4 Bônus para você apresentar com autoridade e segurança
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 font-normal" style={{ textWrap: 'balance' }}>
+                Materiais complementares desenvolvidos para elevar o nível da sua ação e dar total tranquilidade na hora de falar em público.
+              </p>
+            </div>
+
+            {/* Grid dos 4 Bônus */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              
+              {/* BÔNUS 01 */}
+              <div className="bg-white rounded-2xl p-5 border border-amber-200/80 hover:border-amber-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-black tracking-wider uppercase bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-0.5 rounded-md">
+                      BÔNUS 01
+                    </span>
+                    <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center border border-rose-100">
+                      <FileText className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  {/* Imagem Mockup do Bônus 1 */}
+                  <div 
+                    onClick={() => setSelectedSlidePreview('/bonus/bonus-1.png')}
+                    className="relative rounded-xl overflow-hidden border border-rose-100/90 shadow-xs bg-rose-50/30 cursor-pointer group/img"
+                  >
+                    <img
+                      src="/bonus/bonus-1.png"
+                      alt="Kit do Participante - Bônus 1"
+                      className="w-full aspect-[3/2] object-cover group-hover/img:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-xs shadow-xs">
+                        Ampliar
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
+                      Kit do Participante
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed font-normal">
+                      1 PDF curto para entregar impresso ou enviar por WhatsApp depois da palestra, com sinais de atenção e fontes oficiais.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-100 bg-amber-50/50 -mx-5 -mb-5 p-3.5 rounded-b-2xl">
+                  <p className="text-[11px] font-semibold text-amber-900 flex items-start gap-1.5 leading-snug">
+                    <span className="text-amber-600 font-bold shrink-0">💡</span>
+                    <span>Faz o palestrante parecer muito mais profissional e fixa a mensagem após o evento.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* BÔNUS 02 */}
+              <div className="bg-white rounded-2xl p-5 border border-amber-200/80 hover:border-amber-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-black tracking-wider uppercase bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-0.5 rounded-md">
+                      BÔNUS 02
+                    </span>
+                    <div className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100">
+                      <Award className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  {/* Imagem Mockup do Bônus 2 */}
+                  <div 
+                    onClick={() => setSelectedSlidePreview('/bonus/bonus-2.png')}
+                    className="relative rounded-xl overflow-hidden border border-amber-200/60 shadow-xs bg-amber-50/30 cursor-pointer group/img"
+                  >
+                    <img
+                      src="/bonus/bonus-2.png"
+                      alt="Kit Institucional Pronto - Bônus 2"
+                      className="w-full aspect-[3/2] object-cover group-hover/img:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-xs shadow-xs">
+                        Ampliar
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
+                      Kit Institucional Pronto
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed font-normal">
+                      Certificado de participação, lista de presença oficial e modelo de declaração/registro da ação realizada.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-100 bg-amber-50/50 -mx-5 -mb-5 p-3.5 rounded-b-2xl">
+                  <p className="text-[11px] font-semibold text-amber-900 flex items-start gap-1.5 leading-snug">
+                    <span className="text-amber-600 font-bold shrink-0">🏛️</span>
+                    <span>Para empresa, escola e clínica aumenta muito o valor percebido e atende ao RH.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* BÔNUS 03 */}
+              <div className="bg-white rounded-2xl p-5 border border-amber-200/80 hover:border-amber-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-black tracking-wider uppercase bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-0.5 rounded-md">
+                      BÔNUS 03
+                    </span>
+                    <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+                      <ShieldCheck className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  {/* Imagem Mockup do Bônus 3 */}
+                  <div 
+                    onClick={() => setSelectedSlidePreview('/bonus/bonus-3.png')}
+                    className="relative rounded-xl overflow-hidden border border-emerald-200/60 shadow-xs bg-emerald-50/30 cursor-pointer group/img"
+                  >
+                    <img
+                      src="/bonus/bonus-3.png"
+                      alt="20 Perguntas que Podem Fazer na Palestra - Bônus 3"
+                      className="w-full aspect-[3/2] object-cover group-hover/img:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-xs shadow-xs">
+                        Ampliar
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
+                      20 Perguntas & Respostas
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed font-normal">
+                      Perguntas comuns da plateia + respostas curtas e seguras para você nunca ser pego de surpresa.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-100 bg-amber-50/50 -mx-5 -mb-5 p-3.5 rounded-b-2xl">
+                  <p className="text-[11px] font-semibold text-amber-900 flex items-start gap-1.5 leading-snug">
+                    <span className="text-amber-600 font-bold shrink-0">🎯</span>
+                    <span>Bate forte na insegurança de quem vai apresentar, dando total tranquilidade ao palestrante.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* BÔNUS 04 */}
+              <div className="bg-white rounded-2xl p-5 border border-amber-200/80 hover:border-amber-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-black tracking-wider uppercase bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-0.5 rounded-md">
+                      BÔNUS 04
+                    </span>
+                    <div className="w-8 h-8 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center border border-pink-100">
+                      <Send className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  {/* Imagem Mockup do Bônus 4 */}
+                  <div 
+                    onClick={() => setSelectedSlidePreview('/bonus/bonus-4.png')}
+                    className="relative rounded-xl overflow-hidden border border-pink-200/60 shadow-xs bg-pink-50/30 cursor-pointer group/img"
+                  >
+                    <img
+                      src="/bonus/bonus-4.png"
+                      alt="Convite Editável para a Palestra - Bônus 4"
+                      className="w-full aspect-[3/2] object-cover group-hover/img:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-xs shadow-xs">
+                        Ampliar
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
+                      Convite Editável da Palestra
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed font-normal">
+                      Modelos de convite digital para empresas, escolas e clínicas divulgarem o evento em redes e WhatsApp.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-100 bg-amber-50/50 -mx-5 -mb-5 p-3.5 rounded-b-2xl">
+                  <p className="text-[11px] font-semibold text-amber-900 flex items-start gap-1.5 leading-snug">
+                    <span className="text-amber-600 font-bold shrink-0">📢</span>
+                    <span>Facilita a divulgação antecipada e garante maior presença e engajamento do público.</span>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Aviso de inclusão na Opção 2 */}
+            <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200 text-center max-w-xl mx-auto flex items-center justify-center gap-2 text-xs sm:text-sm text-amber-950 font-medium shadow-xs">
+              <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
+              <span>
+                <strong>Inclusos no Kit Completo:</strong> todos os 4 bônus estão 100% inclusos na <strong>Opção 2</strong> logo abaixo.
+              </span>
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* =========================================================================
             5. AQUI ENTRAM OS DOIS PREÇOS
             ========================================================================= */}
         <section id="precos" className="py-16 sm:py-24 px-4 sm:px-6 relative">
@@ -436,59 +662,81 @@ export default function App() {
               <div className="relative bg-gradient-to-b from-[#FFFDF8] via-white to-[#FFF5F8] rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 shadow-xl shadow-amber-500/10 flex flex-col justify-between ring-1 ring-amber-400/30">
                 
                 {/* Floating Recommended Ribbon with Gold Accents */}
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 via-amber-600 to-rose-600 text-white text-xs font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-amber-200/40">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 via-amber-600 to-rose-600 text-white text-xs font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-amber-200/40 whitespace-nowrap">
                   <Sparkles className="w-3.5 h-3.5 text-amber-200" />
                   MAIS COMPLETO & RECOMENDADO
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-5">
                   <div>
-                    <div className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-700">
-                      <span>⭐ OPÇÃO 2</span>
+                    <div className="flex items-center justify-between flex-wrap gap-1.5">
+                      <div className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-700">
+                        <span>⭐ OPÇÃO 2</span>
+                      </div>
+                      <span className="text-[11px] font-black uppercase px-2.5 py-0.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-300">
+                        🎨 Edição 100% no Canva
+                      </span>
                     </div>
                     <h3 className="text-2xl font-black text-slate-900 mt-1">
                       KIT COMPLETO
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-1 font-normal">
-                      Apresentação + materiais complementares para uma ação corporativa ou escolar impecável.
+                      Apresentação completa + <strong>todos os 4 bônus inclusos</strong>. Edição rápida e prática direto no Canva.
                     </p>
                   </div>
 
-                  <div className="space-y-3.5 py-2 border-y border-amber-100 text-sm text-slate-800">
+                  {/* Destaque Importante: Editável somente no Canva */}
+                  <div className="p-3 rounded-xl bg-cyan-50/80 border border-cyan-200/90 text-cyan-950 text-xs flex items-center gap-2.5 shadow-2xs">
+                    <span className="text-base shrink-0">🎨</span>
+                    <div className="leading-snug">
+                      <strong className="text-cyan-900 font-bold block">Editável somente no Canva</strong>
+                      <span className="text-slate-600">Acesse pelo celular ou computador com conta gratuita ou Pro, sem instalar nada.</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 py-2 border-y border-amber-100 text-sm text-slate-800">
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5 stroke-[3]" />
                       <div>
-                        <strong>Tudo da versão Essencial</strong>
-                        <p className="text-xs text-slate-500 font-normal">Apresentação completa e pronta em 16:9 (.pptx e .pdf).</p>
+                        <strong className="text-slate-900">Apresentação Principal Completa</strong>
+                        <p className="text-xs text-slate-600 font-normal">Formato 16:9 widescreen, editável exclusivamente no Canva + PDF pronto para projetar.</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-2.5 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/60">
+                    <div className="flex items-start gap-2.5 bg-amber-50/70 p-2.5 rounded-xl border border-amber-200/80">
                       <Gift className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-amber-950">+ Kit do Participante</strong>
-                        <p className="text-xs text-slate-600 font-normal">Material de apoio para entregar impresso ou enviar por WhatsApp após a palestra.</p>
+                        <strong className="text-amber-950">BÔNUS 01 • Kit do Participante</strong>
+                        <p className="text-xs text-slate-600 font-normal">PDF de bolso pós-palestra com sinais de alerta, orientações e fontes oficiais.</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-2.5 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/60">
-                      <HelpCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-amber-950">+ 20 Perguntas que Podem Fazer</strong>
-                        <p className="text-xs text-slate-600 font-normal">Guia com respostas prontas para você se preparar com segurança para dúvidas da plateia.</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-2.5 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/60">
+                    <div className="flex items-start gap-2.5 bg-amber-50/70 p-2.5 rounded-xl border border-amber-200/80">
                       <Award className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-amber-950">+ Kit Institucional</strong>
-                        <p className="text-xs text-slate-600 font-normal">Certificado editável + lista de presença + materiais para organizar sua ação.</p>
+                        <strong className="text-amber-950">BÔNUS 02 • Kit Institucional Pronto</strong>
+                        <p className="text-xs text-slate-600 font-normal">Certificado editável no Canva + lista de presença oficial + registro da ação.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2.5 bg-amber-50/70 p-2.5 rounded-xl border border-amber-200/80">
+                      <HelpCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-amber-950">BÔNUS 03 • 20 Perguntas que Podem Fazer</strong>
+                        <p className="text-xs text-slate-600 font-normal">Guia com respostas prontas e seguras para não ser pego de surpresa na palestra.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2.5 bg-amber-50/70 p-2.5 rounded-xl border border-amber-200/80">
+                      <Send className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-amber-950">BÔNUS 04 • Convite Editável da Palestra</strong>
+                        <p className="text-xs text-slate-600 font-normal">Modelos digitais editáveis no Canva para empresas, escolas e clínicas.</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="text-center py-3 flex flex-col items-center justify-center w-full">
+                  <div className="text-center py-2 flex flex-col items-center justify-center w-full">
                     <div className="flex items-center justify-center gap-2 mb-1">
                       <span className="text-xs text-slate-500 font-medium">
                         De <span className="line-through text-slate-400">R$ 30,00</span> por apenas:
@@ -510,11 +758,11 @@ export default function App() {
                     onClick={() => handleOpenCheckout('completo')}
                     className="w-full py-4 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold rounded-xl text-sm sm:text-base transition-all shadow-lg shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <span>QUERO O KIT COMPLETO</span>
+                    <span>QUERO O KIT COMPLETO + TODOS OS BÔNUS</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <p className="text-[11px] text-center text-slate-600 mt-2 font-normal">
-                    Acesso imediato • Todos os bônus inclusos • Garantia de 7 dias
+                    Acesso imediato • Editável somente no Canva • Todos os 4 bônus inclusos
                   </p>
                 </div>
               </div>

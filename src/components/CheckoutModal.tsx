@@ -76,18 +76,25 @@ E-mail cadastrado: ${email}
 Status: Pagamento confirmado
 
 LINKS DE ACESSO AO MATERIAL:
+${selectedPlan === 'completo' ? `
+1. Template Oficial da Apresentação no CANVA (Editável SOMENTE no Canva - conta gratuita ou Pro):
+   https://canva.com/design/template-outubro-rosa-2026-oficial
+
+2. Apresentação em PDF de Alta Resolução (pronta para projetar):
+   https://download.outubrorosa.exemplo/apresentacao-outubro-rosa.pdf
+
+BÔNUS DO KIT COMPLETO INCLUÍDOS:
+3. BÔNUS 01: Kit do Participante (PDF de bolso para impressão e envio WhatsApp)
+4. BÔNUS 02: Kit Institucional Pronto (Certificado editável no Canva + Lista de presença + Declaração)
+5. BÔNUS 03: 20 Perguntas que Podem Fazer na Palestra (Guia com respostas prontas)
+6. BÔNUS 04: Convite Editável da Palestra (Modelos digitais editáveis no Canva para empresas, escolas e clínicas)
+` : `
 1. Apresentação PowerPoint (.pptx editável 16:9):
    https://download.outubrorosa.exemplo/apresentacao-outubro-rosa.pptx
 
 2. Apresentação em PDF de Alta Resolução:
    https://download.outubrorosa.exemplo/apresentacao-outubro-rosa.pdf
-
-${selectedPlan === 'completo' ? `
-BÔNUS DO KIT COMPLETO INCLUÍDOS:
-3. Kit do Participante (Guia de bolso para impressão e envio digital)
-4. 20 Perguntas que Podem Fazer Durante a Palestra (Guia com respostas médicas)
-5. Kit Institucional (Modelo de Certificado editável + Lista de presença + Cartazes de divulgação)
-` : ''}
+`}
 
 Suporte: contato@outubrorosa.exemplo
 Agradecemos pela dedicação em levar conscientização e prevenção!`;
@@ -192,13 +199,16 @@ Agradecemos pela dedicação em levar conscientização e prevenção!`;
                 <Check className="w-4 h-4 text-emerald-600" />
                 O que você recebe imediatamente:
               </div>
-              <p>• Apresentação completa e profissional pronta para apresentar em 16:9 (.pptx editável + .pdf)</p>
-              {selectedPlan === 'completo' && (
+              {selectedPlan === 'completo' ? (
                 <>
-                  <p>• <strong>Kit do Participante</strong> para enviar ou entregar após a palestra</p>
-                  <p>• <strong>20 Perguntas que Podem Fazer</strong> para se preparar com respostas</p>
-                  <p>• <strong>Kit Institucional</strong> com Certificado editável + Lista de presença</p>
+                  <p>• <strong>Apresentação Principal:</strong> editável SOMENTE no Canva (conta grátis ou Pro) + PDF pronto</p>
+                  <p>• <strong>Bônus 01: Kit do Participante</strong> (PDF de apoio para imprimir ou enviar)</p>
+                  <p>• <strong>Bônus 02: Kit Institucional</strong> (Certificado editável no Canva + Lista de presença)</p>
+                  <p>• <strong>Bônus 03: 20 Perguntas & Respostas</strong> para dúvidas da plateia</p>
+                  <p>• <strong>Bônus 04: Convite Editável da Palestra</strong> (editável no Canva para empresas, escolas e clínicas)</p>
                 </>
+              ) : (
+                <p>• Apresentação completa e profissional em 16:9 (.pptx editável + .pdf pronto)</p>
               )}
             </div>
 
