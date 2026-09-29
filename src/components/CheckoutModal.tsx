@@ -330,23 +330,27 @@ Agradecemos pela dedicação em levar conscientização e prevenção!`;
               )}
 
               {/* Submit CTA Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3.5 px-4 bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-rose-600/30 hover:shadow-rose-600/40 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
-              >
-                {isSubmitting ? (
-                  <span className="inline-flex items-center gap-2">
-                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    Processando com segurança...
-                  </span>
-                ) : (
-                  <>
-                    <span>Confirmar e Receber Apresentação · R$ {price}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                )}
-              </button>
+              {selectedPlan === 'essencial' ? (
+                <a
+                  href="https://pay.wiapy.com/ZsALudkhdtGU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                >
+                  <span>Ir para Checkout Seguro Wiapy · R$ 9,90</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              ) : (
+                <a
+                  href="https://pay.wiapy.com/9xisvP8abQV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-rose-600/30 hover:shadow-rose-600/40 transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                >
+                  <span>Ir para Checkout Seguro Wiapy · R$ 15,00</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              )}
 
               <div className="flex items-center justify-center gap-4 text-[11px] text-slate-600 pt-1">
                 <span className="flex items-center gap-1">

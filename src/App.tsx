@@ -187,13 +187,13 @@ export default function App() {
 
             {/* CTA Button & Pricing Anchor */}
             <div className="pt-2 flex flex-col items-center justify-center gap-2">
-              <button
-                onClick={() => handleOpenCheckout('completo')}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-lg shadow-rose-600/25 hover:shadow-rose-600/35 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-3"
+              <a
+                href="#precos"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-lg shadow-rose-600/25 hover:shadow-rose-600/35 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-3 text-center"
               >
                 <span>QUERO MINHA APRESENTAÇÃO</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
               <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold">
                 <span className="text-amber-700 font-bold bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
                   A partir de R$ 9,90
@@ -646,12 +646,14 @@ export default function App() {
                 </div>
 
                 <div className="pt-6">
-                  <button
-                    onClick={() => handleOpenCheckout('essencial')}
-                    className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm transition-all shadow-sm cursor-pointer"
+                  <a
+                    href="https://pay.wiapy.com/ZsALudkhdtGU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm transition-all shadow-sm flex items-center justify-center text-center cursor-pointer"
                   >
                     QUERO SOMENTE A APRESENTAÇÃO
-                  </button>
+                  </a>
                   <p className="text-[11px] text-center text-slate-600 mt-2">
                     Acesso imediato • Garantia de 7 dias
                   </p>
@@ -754,13 +756,15 @@ export default function App() {
                 </div>
 
                 <div className="pt-6">
-                  <button
-                    onClick={() => handleOpenCheckout('completo')}
-                    className="w-full py-4 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold rounded-xl text-sm sm:text-base transition-all shadow-lg shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
+                  <a
+                    href="https://pay.wiapy.com/9xisvP8abQV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold rounded-xl text-sm sm:text-base transition-all shadow-lg shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 text-center"
                   >
                     <span>QUERO O KIT COMPLETO + TODOS OS BÔNUS</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                   <p className="text-[11px] text-center text-slate-600 mt-2 font-normal">
                     Acesso imediato • Editável somente no Canva • Todos os 4 bônus inclusos
                   </p>
@@ -943,13 +947,13 @@ export default function App() {
             </div>
 
             <div className="pt-2 flex flex-col items-center justify-center gap-2">
-              <button
-                onClick={() => handleOpenCheckout('completo')}
-                className="w-full sm:w-auto px-9 py-4 bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-xl shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-3"
+              <a
+                href="#precos"
+                className="w-full sm:w-auto px-9 py-4 bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-xl shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-3 text-center"
               >
                 <span>QUERO MINHA APRESENTAÇÃO</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
               <span className="text-xs sm:text-sm font-semibold text-slate-600">
                 A partir de R$ 9,90 · Liberação imediata
               </span>
