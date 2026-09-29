@@ -17,6 +17,7 @@ import {
   Award,
   FileText,
   Send,
+  Edit3,
   X
 } from 'lucide-react';
 import { CheckoutModal } from './components/CheckoutModal';
@@ -61,6 +62,10 @@ export default function App() {
   };
 
   const faqItems = [
+    {
+      q: "Os slides são editáveis? Consigo colocar meu nome e a logo da minha empresa?",
+      a: "Sim, 100% editáveis! Você tem total autonomia para alterar qualquer texto, títulos, trocar cores, ajustar fontes, adicionar ou remover slides e colocar o logotipo da sua empresa, clínica, escola ou instituição com total facilidade."
+    },
     {
       q: "Como recebo o material?",
       a: "O material é digital e será disponibilizado imediatamente após a confirmação do pagamento, com download direto na tela e envio de cópia de segurança para o seu e-mail."
@@ -108,17 +113,17 @@ export default function App() {
             {/* Elegant Kicker in Poppins Gold */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50/80 border border-amber-200/80 text-xs font-semibold text-amber-800 shadow-xs">
               <span className="text-amber-500">✨</span>
-              <span>Campanha Nacional de Conscientização</span>
+              <span>Campanha Nacional de Conscientização • Slides 100% Editáveis</span>
             </div>
 
-            {/* Headline: extremamente direto */}
+            {/* Headline: extremamente direto com foco em editável */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.15]" style={{ textWrap: 'balance' }}>
-              Precisa apresentar uma palestra de Outubro Rosa? <span className="text-rose-600">Os slides já estão prontos.</span>
+              Precisa apresentar uma palestra de Outubro Rosa? <span className="text-rose-600">Slides 100% editáveis e prontos para usar.</span>
             </h1>
 
-            {/* Subheadline em Poppins Regular */}
+            {/* Subheadline em Poppins Regular com destaque para edição rápida */}
             <p className="text-base sm:text-lg md:text-xl text-slate-600 font-normal max-w-3xl mx-auto leading-relaxed" style={{ textWrap: 'balance' }}>
-              Apresentação profissional e completa sobre conscientização e prevenção do câncer de mama, pronta para usar em empresas, escolas, clínicas, igrejas, equipes e eventos.
+              Apresentação profissional e completa sobre conscientização e prevenção do câncer de mama. <strong>Totalmente editável:</strong> altere textos, troque cores ou insira o logotipo e o nome da sua empresa, clínica ou escola em poucos cliques.
             </p>
 
             {/* DOIS CARROSSEIS INFINITOS UM DEBAIXO DO OUTRO */}
@@ -166,7 +171,11 @@ export default function App() {
             </div>
 
             {/* Elementos logo abaixo (Clean checklist com toques de Poppins Gold e Emerald) */}
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2.5 text-xs sm:text-sm font-medium text-slate-700 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2.5 text-xs sm:text-sm font-medium text-slate-700 pt-2">
+              <span className="flex items-center gap-1.5 font-bold text-rose-800 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 shadow-2xs">
+                <Check className="w-4 h-4 text-rose-600 stroke-[3]" />
+                100% Editável (textos, cores e logos)
+              </span>
               <span className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
                 Slides prontos e completos
@@ -177,11 +186,7 @@ export default function App() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
-                Conteúdo organizado e fácil de apresentar
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
-                Material digital
+                Conteúdo organizado e seguro
               </span>
             </div>
 
@@ -267,18 +272,18 @@ export default function App() {
               {/* Card 3 */}
               <div className="p-6 sm:p-7 rounded-2xl bg-[#FFF8F9] border border-rose-100 hover:border-rose-200 transition-colors shadow-xs flex flex-col items-center justify-between">
                 <div className="space-y-3 flex flex-col items-center w-full">
-                  <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mx-auto shadow-xs">
-                    <Monitor className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-xs border border-amber-200/60">
+                    <Edit3 className="w-6 h-6" />
                   </div>
                   <h3 className="text-base font-bold text-slate-900 tracking-tight">
-                    PRONTO PARA APRESENTAR
+                    100% EDITÁVEL & FLEXÍVEL
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed font-normal">
-                    Ideal para projetor, TV ou computador. Abra em formato PowerPoint (.pptx) ou PDF sem perder a qualidade.
+                    Personalize qualquer texto, insira seu nome ou a logo da sua empresa ou clínica. Apresente pronto ou customize em minutos.
                   </p>
                 </div>
                 <div className="mt-5 pt-3 border-t border-rose-100/80 text-xs font-semibold text-rose-700 w-full text-center">
-                  Compatível com qualquer tela
+                  Total liberdade de edição
                 </div>
               </div>
 
@@ -341,10 +346,10 @@ export default function App() {
             {/* Fechamento da seção */}
             <div className="p-6 rounded-2xl bg-gradient-to-r from-rose-50 via-pink-50 to-rose-50 border border-rose-200 text-center space-y-2">
               <p className="text-base sm:text-lg font-extrabold text-slate-900">
-                Você só precisa se preparar para apresentar. A estrutura visual já está pronta.
+                Você só precisa se preparar para apresentar. A estrutura já está pronta e é 100% editável.
               </p>
               <p className="text-xs sm:text-sm text-slate-600">
-                Sem perder tempo formatando fontes, alinhando imagens ou pesquisando tópicos na internet.
+                Sem perder tempo diagramando do zero. Abra, personalize com seus dados se desejar, e conduza sua ação com tranquilidade.
               </p>
             </div>
 
@@ -590,7 +595,7 @@ export default function App() {
                 Escolha a opção ideal para a sua apresentação
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
-                Acesso imediato aos arquivos digitais logo após a confirmação.
+                Ambas as opções contam com <strong>slides 100% editáveis</strong> para você personalizar como desejar. Acesso imediato logo após a confirmação.
               </p>
             </div>
 
@@ -608,18 +613,18 @@ export default function App() {
                       ESSENCIAL
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                      Apresentação Outubro Rosa pronta para quem precisa apenas dos slides.
+                      Apresentação Outubro Rosa 100% editável para quem precisa apenas dos slides prontos.
                     </p>
                   </div>
 
                   <div className="space-y-3 py-2 border-y border-slate-100 text-sm text-slate-700">
-                    <div className="flex items-center gap-2.5">
-                      <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3]" />
-                      <span><strong>Apresentação completa</strong></span>
+                    <div className="flex items-center gap-2.5 bg-rose-50/70 p-2.5 rounded-xl border border-rose-200/80 font-bold text-rose-950">
+                      <Check className="w-4 h-4 text-rose-600 shrink-0 stroke-[3]" />
+                      <span>Slides 100% editáveis (.pptx) + PDF pronto</span>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3]" />
-                      <span>Formato digital 16:9</span>
+                      <span>Formato digital 16:9 widescreen</span>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3]" />
@@ -627,11 +632,11 @@ export default function App() {
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3]" />
-                      <span>Pronto para apresentação em projetor ou TV</span>
+                      <span>Pronto para apresentação em projetor, TV ou PC</span>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3]" />
-                      <span>Arquivo em .pptx editável + versão em PDF</span>
+                      <span>Adicione sua logo e altere textos livremente</span>
                     </div>
                   </div>
 
@@ -757,7 +762,7 @@ export default function App() {
 
                 <div className="pt-6">
                   <a
-                    href="https://pay.wiapy.com/9xisvP8abQV"
+                    href="https://pay.wiapy.com/Ez-MfSVRY8S"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-4 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold rounded-xl text-sm sm:text-base transition-all shadow-lg shadow-rose-600/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 text-center"
@@ -939,11 +944,11 @@ export default function App() {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-700 max-w-xl mx-auto leading-relaxed">
-              Tenha uma apresentação profissional, organizada e pronta para sua ação.
+              Tenha uma apresentação profissional, organizada e <strong>100% editável</strong> para a sua ação.
             </p>
 
             <div className="text-xs sm:text-sm font-semibold text-rose-800 bg-white/70 backdrop-blur-xs px-4 py-1.5 rounded-full inline-block border border-rose-200">
-              Apresentação completa • Material digital • Pronta para apresentar
+              Slides 100% editáveis • Adicione sua logo • Pronta para apresentar
             </div>
 
             <div className="pt-2 flex flex-col items-center justify-center gap-2">
@@ -1086,7 +1091,7 @@ export default function App() {
               className="w-full h-auto aspect-video rounded-xl object-contain bg-slate-900 shadow-inner"
             />
             <div className="pt-2 text-center text-xs text-rose-200/80 font-medium">
-              Apresentação Oficial Outubro Rosa • Arquivo .pptx editável + PDF de alta qualidade
+              Apresentação Oficial Outubro Rosa • Slides 100% editáveis + PDF em alta definição
             </div>
           </div>
         </div>

@@ -342,7 +342,7 @@ Agradecemos pela dedicação em levar conscientização e prevenção!`;
                 </a>
               ) : (
                 <a
-                  href="https://pay.wiapy.com/9xisvP8abQV"
+                  href="https://pay.wiapy.com/Ez-MfSVRY8S"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-rose-600 to-pink-600 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-rose-600/30 hover:shadow-rose-600/40 transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
